@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #f3e8ff, #ffe4f2);
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active {
+  display: flex;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  background: #ff85c2;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Cake */
+.cake-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.cake {
+  width: 250px;
+  margin: auto;
+}
+
+.layer {
+  border-radius: 20px;
+  margin: auto;
+}
+
+.layer1 {
+  width: 250px;
+  height: 70px;
+  background: #ffb6d9;
+}
+
+.layer2 {
+  width: 200px;
+  height: 60px;
+  background: #ff8fc7;
+  margin-top: -15px;
+}
+
+.layer3 {
+  width: 150px;
+  height: 50px;
+  background: #ff6bb5;
+  margin-top: -15px;
+}
+
+/* Candle */
+.candle {
+  width: 20px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flame {
+  width: 25px;
+  height: 35px;
+  background: radial-gradient(circle, yellow, orange, red);
+  border-radius: 50%;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: translateX(-50%) scale(1); }
+  to { transform: translateX(-50%) scale(1.2); }
+}
+
+/* Memories */
+.slider img {
+  width: 280px;
+  height: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+/* 🎈 Balloons */
+.balloons {
+  position: fixed;
+  bottom: -180px;
+  width: 180px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.balloons.left { left: 80px; }
+.balloons.right { right: 80px; }
+
+.balloon {
+  width: 140px;
+  position: absolute;
+  animation: floatUp 9s linear infinite;
+}
+
+.b1 { animation-delay: 0s; left: 0; }
+.b2 { animation-delay: 2s; left: 45px; }
+.b3 { animation-delay: 4s; left: 20px; }
+
+.b4 { animation-delay: 1s; right: 0; }
+.b5 { animation-delay: 3s; right: 45px; }
+.b6 { animation-delay: 5s; right: 20px; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-130vh); opacity: 0; }
+}

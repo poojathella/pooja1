@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🎈 Balloons -->
+<div class="balloons left">
+  <img src="balloon.png" class="balloon b1">
+  <img src="balloon.png" class="balloon b2">
+  <img src="balloon.png" class="balloon b3">
+</div>
+
+<div class="balloons right">
+  <img src="balloon.png" class="balloon b4">
+  <img src="balloon.png" class="balloon b5">
+  <img src="balloon.png" class="balloon b6">
+</div>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="./music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Page 1 Countdown -->
+<section class="page active" id="page1">
+  <h1 id="countdown">3</h1>
+</section>
+
+<!-- Page 2 Start -->
+<section class="page" id="page2">
+  <h1>Puttina roju jai jai lu chitti paapaayi😂💗</h1>
+  <h2>Button click chy ra😁</h2>
+  <button onclick="startSurprise()">Start Surprise 🎁</button>
+</section>
+
+<!-- Page 3 Cake -->
+<section class="page" id="page3">
+  <h1>🎂 Cake Time 🎂</h1>
+
+  <div class="cake-container">
+    <div class="candle">
+      <div class="flame" id="flame"></div>
+    </div>
+
+    <div class="cake">
+      <div class="layer layer3"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer1"></div>
+    </div>
+  </div>
+
+  <button onclick="lightCandle()">Light the Candle 🕯️</button>
+  <button id="nextCake" onclick="nextPage(4)" style="display:none;">Next ➡</button>
+</section>
+
+<!-- Page 4 Memories -->
+<section class="page" id="page4">
+  <h1>📸 Sweet Memories 💕</h1>
+  <div class="slider">
+    <img id="photo" src="photo1.jpeg">
+  </div>
+  <button onclick="nextPhoto()">Swipe ➡</button>
+  <button onclick="nextPage(5)">Open Message 💌</button>
+</section>
+
+<!-- Page 5 Message -->
+<section class="page" id="page5">
+  <h1>💖 Birthday Message 💖</h1>
+  <p>
+    Happy Birthday Pottiiiiii 🎂💗 <br><br>
+    Stay happy always 😍✨ <br>
+    May all your dreams come true 💕 <br><br>
+    Once again Happy Birthday 🎁🎉
+  </p>
+  <h2>🎊 The End 🎊</h2>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
