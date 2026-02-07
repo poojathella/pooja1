@@ -138,3 +138,54 @@ button:hover {
   10% { opacity: 1; }
   100% { transform: translateY(-130vh); opacity: 0; }
 }
+
+/* 🔴 PARTICLES FOR CANDLE */
+#particles {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  animation: particleBlast 1s ease-out forwards;
+}
+
+@keyframes particleBlast {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+/* 🔴 FULL SCREEN CENTER BLASTER */
+#screenParticles {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+
+.screenParticle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  animation: screenBlast 1s ease-out forwards;
+}
+
+@keyframes screenBlast {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
