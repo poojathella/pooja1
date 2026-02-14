@@ -45,8 +45,8 @@ function lightCandle() {
   fullScreenBlast();
 }
 
-/* Photo Slider */
-let photos = ["photo1.jpeg", "photo2.jpeg", "photo3.jpeg"];
+/* ✅ Photo Slider (PNG IMAGES) */
+let photos = ["photo1.png", "photo2.png", "photo3.png"];
 let index = 0;
 
 function nextPhoto() {
@@ -84,7 +84,7 @@ function fullScreenBlast() {
   const container = document.getElementById("screenParticles");
   if (!container) return;
 
-  const totalParticles = 300; // 💥 dense explosion
+  const totalParticles = 300; // dense explosion
   const colors = ["#ff4d6d", "#ffd166", "#06d6a0", "#4cc9f0", "#c77dff"];
 
   for (let i = 0; i < totalParticles; i++) {
@@ -92,9 +92,8 @@ function fullScreenBlast() {
     p.className = "screenParticle";
     p.style.background = colors[Math.floor(Math.random() * colors.length)];
 
-    // Explosion in all directions
     const angle = Math.random() * 2 * Math.PI;
-    const distance = Math.random() * 400 + 200; // px distance from center
+    const distance = Math.random() * 400 + 200;
 
     const x = Math.cos(angle) * distance + "px";
     const y = Math.sin(angle) * distance + "px";
